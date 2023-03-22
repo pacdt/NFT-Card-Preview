@@ -44,7 +44,7 @@ main {
 	background-image: url("./img/NFT.png");
 	background-size: cover;
 	background-position: center;
-    margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 /* adicione uma camada extra para a cor de fundo e o ícone */
@@ -59,7 +59,7 @@ main {
 	background-color: #00fff8;
 	opacity: 0.5;
 	z-index: 1;
-    border-radius: 8px;
+	border-radius: 8px;
 }
 
 #nft-img::after {
@@ -82,7 +82,7 @@ main {
 #nft-img:hover::before,
 #nft-img:hover::after {
 	display: block;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 /* defina uma transição suave para a camada extra */
@@ -125,8 +125,8 @@ main {
 #eth h2,
 #time h2 {
 	font-style: normal;
-	font-size: 15px;
-	line-height: 19px;
+	font-size: 16px;
+	line-height: 20px;
 }
 #eth h2 {
 	font-weight: 600;
@@ -144,10 +144,42 @@ main {
 #creator h2 {
 	font-style: normal;
 	font-weight: 400;
-	font-size: 15px;
-	line-height: 19px;
+	font-size: 16px;
+	line-height: 20px;
 }
-.he:hover{
-    color: #00fff8;
-    cursor: pointer;
+.he:hover {
+	color: #00fff8;
+	cursor: pointer;
+}
+#small-screen{
+    display: none;
+}
+@media screen and (min-width: 500px) {
+	main {
+		width: 350px;
+	}
+	#nft-img {
+		width: 302px;
+		height: 302px;
+	}
+}
+@media screen and (max-width: 326px) {
+    main{
+        display: none;
+    }
+    #small-screen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        background-color: #15263f;
+        border-radius: 8px;
+        width: 90%;
+    }
+    #small-screen h2{
+        font-size: 20px;
+        color: crimson;
+        text-align: center;
+        font-weight: 300;
+    }
 }
